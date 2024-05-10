@@ -16,4 +16,4 @@ yarn build
 ```
 
 ### Preview
-![https://gitee.com/lubanseven/eyesight/raw/master/qr.png](https://gitee.com/lubanseven/eyesight/raw/master/qr.png)
+<img src="./qr.png" width="200" />
