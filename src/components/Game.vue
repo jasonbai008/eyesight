@@ -2,7 +2,7 @@
   <div class="game-wrap">
     <div class="top">
       <h1>{{arr.length}}</h1>
-      <span class="chance" v-show="failTimes>0">{{failTimes}}</span>
+      <span class="chance">life: {{failTimes}}</span>
     </div>
     <div class="middle" @click="tap">
       <div v-for="(item,i) in arr" :key="i" class="item" :style="{background:item.color}" :data-special="item.isSpecial"></div>
@@ -96,15 +96,20 @@ function reset() {
 .game-wrap {
   width: 100%;
   height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   background: #ecf0f1;
   flex-direction: column;
   .top {
+    width: 100%;
+    margin-top: -15px;
     flex-grow: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: -30px 0;
+    position: relative;
     h1 {
       font-size: 50px;
       margin: 0;
@@ -114,15 +119,14 @@ function reset() {
     .chance {
       position: absolute;
       left: 30px;
-      top: 20px;
+      top: 30px;
       font-size: 18px;
-      color: #999;
+      color: #666;
     }
   }
   .middle {
     width: 100%;
-    // aspect-ratio: 1/1; // 部分手机不兼容
-    height: 100vw;
+    aspect-ratio: 1/1; // 部分手机不兼容
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
